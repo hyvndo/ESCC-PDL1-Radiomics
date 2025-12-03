@@ -6,9 +6,9 @@ This repository contains the code implementation for predicting PD-L1 expression
 
 **Title:** Multivariable Radiomics Model for Predicting Programmed Death-Ligand 1 Expression After Neoadjuvant Chemoradiotherapy in Esophageal Squamous Cell Carcinoma
 
-**Authors:** [Your names and affiliations]
+**Authors:** 
 
-**Journal:** [Journal name - to be added upon acceptance]
+**Journal:** 
 
 ## 🎯 Overview
 
@@ -31,9 +31,9 @@ ESCC-PDL1-Radiomics/
 ├── preprocessing/
 │   └── featureExtractor.py           # PyRadiomics feature extraction
 ├── models/
-│   ├── resnet_training.py            # ResNet18 training script
-│   ├── tabnet_cleaned.ipynb          # TabNet training notebook
-│   └── pycaret_pipeline_cleaned.ipynb # PyCaret ML pipeline
+│   ├── resnet.py            # ResNet18 training script
+│   ├── tabnet.ipynb          # TabNet training notebook
+│   └── pycaret_pipeline.ipynb # PyCaret ML pipeline
 ├── data/                              # Place your data here (not included)
 └── results/                           # Model outputs saved here
 ```
@@ -111,7 +111,7 @@ print(f"Extracted {len(features)} features")
 
 ### 2. Training with PyCaret (Recommended)
 
-See `models/pycaret_pipeline_cleaned.ipynb` for the complete workflow:
+See `models/pycaret_pipeline.ipynb` for the complete workflow:
 
 1. Load radiomics features and clinical data
 2. Feature selection using stability selection
@@ -126,7 +126,7 @@ See `models/pycaret_pipeline_cleaned.ipynb` for the complete workflow:
 
 ### 3. Training TabNet
 
-See `models/tabnet_cleaned.ipynb` for TabNet implementation on tabular features.
+See `models/tabnet.ipynb` for TabNet implementation on tabular features.
 
 **Configuration:**
 - Learning rate: 0.02
@@ -139,7 +139,7 @@ See `models/tabnet_cleaned.ipynb` for TabNet implementation on tabular features.
 ### 4. Training ResNet18
 
 ```bash
-python models/resnet_training.py \
+python models/resnet.py \
     --data_dir ./data/pre_train \
     --post_data_dir ./data/post_train \
     --test_dir ./data/pre_test \
@@ -208,7 +208,7 @@ pdl1_clf = setup(
 )
 ```
 
-For ResNet18, use command-line arguments (see `python models/resnet_training.py --help`)
+For ResNet18, use command-line arguments (see `python models/resnet.py --help`)
 
 ## ⚠️ Important Notes
 
@@ -227,11 +227,11 @@ For ResNet18, use command-line arguments (see `python models/resnet_training.py 
 If you use this code in your research, please cite our paper:
 
 ```bibtex
-@article{your_paper_2024,
+@article{your_paper_2025,
   title={Multivariable Radiomics Model for Predicting Programmed Death-Ligand 1 Expression After Neoadjuvant Chemoradiotherapy in Esophageal Squamous Cell Carcinoma},
   author={[Your names]},
   journal={[Journal name]},
-  year={2024},
+  year={2025},
   doi={[DOI]}
 }
 ```
@@ -248,7 +248,7 @@ We welcome contributions! Please feel free to submit issues or pull requests.
 
 For questions about the code or paper:
 - GitHub: [@hyvndo](https://github.com/hyvndo)
-- Email: [Your email]
+- Email: hyundo@yonsei.ac.kr
 
 ## 🙏 Acknowledgments
 
@@ -265,4 +265,4 @@ For questions about the code or paper:
 
 ---
 
-**Last Updated:** December 2024
+**Last Updated:** December 2025
